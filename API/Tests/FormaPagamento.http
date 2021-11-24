@@ -1,0 +1,7 @@
+POST https://localhost:5001/api/formapagamento/create
+Content-Type: application/json
+
+{
+    "NomeFormaPagamento" : "PIX",
+    "DescricaoFormaPagamento" : "Pague suas compras utilizando PIX no seu banco de preferência. Processamento instantâneo"
+}
