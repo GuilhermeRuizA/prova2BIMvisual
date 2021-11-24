@@ -1,2 +1,18 @@
 ### Listar vendas
-POST https://localhost:5001/api/venda/list
+GET https://localhost:5001/api/venda/list
+
+### 
+
+POST https://localhost:5001/api/venda/create
+Content-Type: application/json
+
+{
+    "Cliente" : "José",
+    "Itens" : [
+        {
+            "ProdutoId" : 1,
+            "Quantidade" : 1,
+            "Preco" : 1.25
+        }
+    ]
+}
