@@ -27,6 +27,7 @@ export class CadastrarProdutoComponent implements OnInit {
     ngOnInit(): void {
         this.categoriaService.list().subscribe((categorias) => {
             this.categorias = categorias;
+            console.log(categorias);
         });
     }
 

@@ -1,3 +1,4 @@
+import { FinalizarcompraComponent } from './components/views/home/finalizarcompra/finalizarcompra.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.component";
@@ -22,6 +23,10 @@ const routes: Routes = [
         path: "produto/cadastrar",
         component: CadastrarProdutoComponent,
     },
+    {
+        path: "compra/finalizar",
+        component: FinalizarcompraComponent
+    }
 ];
 
 @NgModule({

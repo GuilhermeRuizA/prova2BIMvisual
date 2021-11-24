@@ -12,12 +12,13 @@ import { ProdutoService } from "src/app/services/produto.service";
 })
 export class IndexComponent implements OnInit {
     produtos: Produto[] = [];
+    itens: ItemVenda[] = [];
 
     constructor(
         private produtoService: ProdutoService,
         private itemService: ItemService,
         private router: Router
-    ) {}
+    ) { }
 
     ngOnInit(): void {
         this.produtoService.list().subscribe((produtos) => {
@@ -28,13 +29,14 @@ export class IndexComponent implements OnInit {
     adicionar(produto: Produto): void {
         let item: ItemVenda = {
             produto: produto,
-            produtoId: produto.id!,
+            produtoId: produto.produtoId!,
             quantidade: 1,
             preco: produto.preco,
             carrinhoId: localStorage.getItem("carrinhoId")! || "",
         };
         this.itemService.create(item).subscribe((item) => {
             localStorage.setItem("carrinhoId", item.carrinhoId);
+            console.log(item);
             this.router.navigate(["home/carrinho"]);
         });
     }

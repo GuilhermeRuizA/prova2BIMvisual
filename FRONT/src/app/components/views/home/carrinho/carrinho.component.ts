@@ -20,6 +20,7 @@ export class CarrinhoComponent implements OnInit {
             this.valorTotal = this.itens.reduce((total, item) => {
                 return total + item.preco * item.quantidade;
             }, 0);
+            console.log(itens);
         });
     }
 }
