@@ -35,9 +35,9 @@ export class IndexComponent implements OnInit {
             carrinhoId: localStorage.getItem("carrinhoId")! || "",
         };
         this.itemService.create(item).subscribe((item) => {
-            localStorage.setItem("carrinhoId", item.carrinhoId);
-            console.log(item);
-            this.router.navigate(["home/carrinho"]);
+          localStorage.setItem("carrinhoId", item.carrinhoId);
+          console.log(item);
+          this.router.navigate(["home/carrinho"]);
         });
     }
 }

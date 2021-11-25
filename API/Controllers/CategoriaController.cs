@@ -24,7 +24,6 @@ namespace API.Controllers
             _context.SaveChanges();
             return Created("", categoria);
         }
-
         //GET: api/categoria/list
         [HttpGet]
         [Route("list")]

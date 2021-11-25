@@ -10,9 +10,9 @@ namespace API.Controllers
     {
         private readonly DataContext _context;
         public InicializarDadosController(DataContext context)
-        {
-            _context = context;
-        }
+         {
+             _context = context;
+         }
 
         //POST: api/inicializar/create
         [HttpPost]

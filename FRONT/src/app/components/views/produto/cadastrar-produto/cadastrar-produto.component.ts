@@ -25,9 +25,9 @@ export class CadastrarProdutoComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.categoriaService.list().subscribe((categorias) => {
-            this.categorias = categorias;
-            console.log(categorias);
+         this.categoriaService.list().subscribe((categorias) => {
+             this.categorias = categorias;
+             console.log(categorias);
         });
     }
 
@@ -40,8 +40,8 @@ export class CadastrarProdutoComponent implements OnInit {
             categoriaId: this.categoriaId,
         };
         this.produtoService.create(produto).subscribe((produto) => {
-            console.log(produto);
-            this.router.navigate(["produto/listar"]);
+             console.log(produto);
+             this.router.navigate(["produto/listar"]);
         });
     }
 }
